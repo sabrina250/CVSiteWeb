@@ -1,0 +1,108 @@
+
+
+
+.ombre:hover {
+transition: all 300ms ease-in;
+
+opacity: 0.5;
+}
+
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+}
+
+
+//https://nosmoking.developpez.com/demos/css/gauge_circulaire.html
+
+.progress-circle{
+    position: relative;             /* pour servir de référent */
+    box-sizing: border-box;         /* prise en compte bordure dans la dimension */
+    font-size: 6em;                 /* pour définir les dimensions */
+    width: 1em;                     /* fixe la largeur */
+    height: 1em;                    /* fixe la hauteur */
+    border-radius: 50%;             /* rendu aspect circulaire */
+    border: .15em solid #CDE;       /* couleur de fond de l'anneau */
+    background-color: #FFF;         /* couleur de fond de la progress bar */
+  }
+
+  .progress-masque {
+    
+    position: absolute;
+    width: 1em;                     /* 100% de la largeur */
+    height: 1em;                    /* 100% de la hauteur */
+    left: -.15em;                   /* décalage de la largeur bordure de la gauge */
+    top: -.15em;                    /* décalage de la largeur bordure de la gauge */
+    clip: rect(0, 1em, 1em, .5em);  /* par défaut seule la partie droite est visible */
+  }
+
+  .progress-sup50 {
+    display: none;
+    clip: rect(0, 1em, 1em, .5em);
+  }
+
+.card-body:hover .progress-barre
+ {
+  
+  position: absolute;
+  box-sizing: border-box;         /* prise en compte bordure dans la dimension */
+  border-width: .15em;            /* largeur bordure de la gauge */
+  border-style: solid;
+  border-color: rgb(23, 185, 164);
+  border-radius: 50%;             /* rendu aspect circulaire */
+  width: 1em;                     /* largeur à 100% */
+  height: 1em;                    /* hauteur à 100% */
+  clip: rect(0, .5em, 1em, 0);    /* on ne garde que la partie gauche */
+}
+
+.card-title:hover {
+  opacity: 0.5;
+}
+
+
+.progress-circle:after {
+    
+  content: attr(data-value) "%";  /* récup. valeur de progression */
+  
+  font-size: 0.15em;              /* taille de la font en % du parent */
+  height: 100%;                   /* centrage dans le parent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*-- pour effet shadow intérieur --*/
+  border-radius: 50%;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .5) inset;
+}
+
+
+
+@media (max-width: 800px) {
+    .progress-barre, .progress-sup50
+ {
+  
+  position: absolute;
+  box-sizing: border-box;         /* prise en compte bordure dans la dimension */
+  border-width: .15em;            /* largeur bordure de la gauge */
+  border-style: solid;
+  border-color: #069;
+  border-radius: 50%;             /* rendu aspect circulaire */
+  width: 1em;                     /* largeur à 100% */
+  height: 1em;                    /* hauteur à 100% */
+  clip: rect(0, .5em, 1em, 0);    /* on ne garde que la partie gauche */
+}
+
+
+}
+
+.fab{
+  margin: auto;
+  font-size: 45px;
+  
+}
+@media (max-width: 800px) {
+.card-img-top {
+  height: auto;
+}
+}
