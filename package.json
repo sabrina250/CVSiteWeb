@@ -1,0 +1,27 @@
+{
+  "name": "cvsiteweb",
+  "version": "1.0.0",
+  "description": "mon cv en site web",
+  "main": "index.js",
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.10.10",
+    "@amcharts/amcharts4-fonts": "^4.0.1",
+    "@amcharts/amcharts4-geodata": "^4.1.19",
+    "bootstrap": "^4.5.3",
+    "bootstrap-icons": "^1.1.0",
+    "canvas-gauges": "^2.1.7-radial",
+    "gsap": "^3.5.1",
+    "gsap-then": "^3.0.0",
+    "request-animation-frame-polyfill-es6": "^1.0.1",
+    "sass": "^1.28.0",
+    "svg-gauge": "^1.0.6"
+  },
+  "devDependencies": {
+    "coffescript": "0.0.1-security"
+  },
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
